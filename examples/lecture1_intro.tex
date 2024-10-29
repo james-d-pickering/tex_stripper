@@ -1,0 +1,193 @@
+\chapter{Why Spectroscopy?}
+
+\begin{aims}{Lecture Aims}{
+\begin{itemize}
+\item To recap some basics from CH1200.
+\item To start to understand links between molecular structure and spectra.
+\item To appreciate how spectroscopy underpins everything we do in science.
+\end{itemize}}
+\end{aims}
+
+It might seem odd that we have dedicated an entire lecture course to spectroscopy, which you may feel is only a small part of `chemistry' as a whole. As a pure discipline, that's true. However, ultimately every chemist (and almost every scientist) uses spectroscopy on a day-to-day basis to get their work done -- even if they would not necessarily call themselves a `spectroscopist'. \textbf{Everything we know about molecular structure, we know because of spectroscopy.}
+
+Today we are going to recap some of the basic things about spectroscopy that we learnt in CH1200, and then start to see how we will go deeper in this course. Throughout, I'll try to emphasise areas where this stuff is actually used -- \textbf{this is not an abstract, theoretical thing we are teaching you.} Every chemist uses spectroscopy to some extent, so it's critical that that you understand how it works.
+
+\section{Spectroscopy in Science}
+It is impossible to overstate how fundamental spectroscopy is to modern science. Spectroscopy is used in some form in every scientific discipline, and in many it is \textit{the} fundamental technique used to learn about the world around us. I went through and counted 38 Nobel Prizes which have been awarded since about 1910 that are largely based around the development of spectroscopic techniques, or are in the novel application of spectroscopy to a problem. 
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{./lecture1/figures/rabi_nmr}
+\caption{The first NMR spectrum, measured by Isidor Rabi in 1938. Humble beginnings!}
+\end{figure}
+
+We can't cover everything in this lecture course, but we can make a solid start. We are going to start by thinking about what spectroscopy \textit{is}, and recap some of what we learnt last year (with a few new bits). Then we'll move on and think very generally about what happens when light interacts with matter. Fundamentally, that is what is spectroscopy is:
+\begin{quote}
+\textit{Spectroscopy is the study of the interaction of light with matter.}
+\end{quote}
+
+The range of different possible kinds of light and matter results in a huge range of different flavours of spectroscopy, which all look at different things. Ultimately though, it's all about understanding what happens when different kinds of light hit matter, and a lot of the fundamentals are the same regardless of the specific kind of spectroscopy you are doing. Like humans, different spectroscopies have far more in common with each other than the things that divide them.
+
+
+
+\section{What is Spectroscopy?}
+Spectroscopy is fundamentally the study of the interaction of \textbf{light} with \textbf{matter}. As chemists, the `matter' is atoms and molecules. `Light' doesn't necessarily mean visible light, and in this context is just a slang term for \textbf{electromagnetic radiation}. This radiation could take the form of radio waves (in NMR spectroscopy), infrared light (in vibrational spectroscopy), microwaves (in rotational spectroscopy), or visible/ultraviolet light (in electronic spectroscopy), among others. The EM spectrum that we will become intimately familiar with is below.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.85\textwidth]{./lecture1/figures/EMspectrum}
+\caption{The EM spectrum. Our best friend.}
+\end{figure}
+
+Last year, we learnt a simple \textbf{`states, light, jump'} model of spectroscopy, shown in~\autoref{fig:stateslightjump}. This model is a good way to think about what happens. You shoot a photon of light at a molecule, the photon is absorbed, and the molecule jumps up to a higher energy state. By recording the energy of the photon of light that made this jump happen, we can learn the energy gap between the two states. This energy gap links to a huge range of different molecular properties, and we will see this in much more detail as we go through the course. The fundamental idea is that measuring this gap allows us to measure molecular properties (either directly or indirectly) -- which is why spectroscopy is so useful.
+
+Recall a few key things that arise from this model:
+\begin{enumerate}
+\item The energy of the photon has to exactly match the energy gap between the two states to cause the jump to happen, due to energy conservation. 
+\item We are \textbf{always} looking at the \textbf{energy gap} between two states, and not the energy of the individual states themselves.
+\item There needs to be \textbf{population} in the state we are jumping \textit{from}, and some kind of available space in the state we are jumping \textit{to}.
+\end{enumerate}
+Each of these points leads us to something we need to recap. 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\textwidth]{./lecture1/figures/stateslightjump}
+\caption{Simple model of spectroscopy. A photon of light causes a molecule to jump from one quantum state to another.}\label{fig:stateslightjump}
+\end{figure}
+\subsection{Energy Units}
+Point (1) above written mathematically says:
+\begin{equation*}
+E_p = E_2 - E_1
+\end{equation*}
+Where $E_p$ is the energy of the photon, and $E_2$ and $E_1$ are the energies the upper and lower state respectively. However, we know from CH1200 that usually we don't talk about the energy of photons in units of Joules, because the numbers get very small and unwieldy. We normally talk about the energy of photons in other units, such as:
+\begin{itemize}
+\item Wavelength ($\lambda$) in \textbf{nanometres} (\si{\nano\metre} -- for visible and UV light). 
+\item Wavenumber ($\bar{\nu}$) in \textbf{wavenumbers} (\si{\per\centi\metre} -- for infrared light).
+\item Frequency ($\nu$) in \textbf{Hertz} (\si{\per\second} -- for microwaves and radiowaves). 
+\item Electronvolts ($E(\mathsf{eV})$) \textbf{electronvolts} (\si{\electronvolt} -- for deep UV and X-rays). 
+\end{itemize}
+Note the standard notation, which I'll try and stick to, however these are rules of thumb\footnote{Rotational spectroscopists use both Hertz and wavenumbers, depending on their mood.}. When we are doing calculations in spectroscopy, it is important that you pay attention to the units, as you can easily get tripped up. If you are adding or subtracting two energies, they need to be in the same units, and so you need to be able to convert between the different kinds of energy units. 
+
+To do these conversions, we use some fundamental constants, and looking at the units of those constants helps us work out what to do:
+\begin{itemize}
+\item The \textit{Planck constant}, $h$, which has a value of \SI{6.626E-34}{\joule\second} (units of \textbf{Joule seconds}).
+\item The speed of light in vacuum, $c$, which has a value of \SI{2.997E8}{\metre\per\second} (units of \textbf{metres per second}).
+\item The electronvolt is defined such that \SI{1}{\electronvolt} $=$ \SI{1.602E-19}{\joule} (i.e there are 1.602$\times$10$^{-19}$ \textbf{Joules per electronvolt}).
+\end{itemize}
+For example, if I have a radio tuned to a frequency of \SI{198}{\kilo\hertz}, then I can multiply this number by $h$ to find the energy ($E$) of the radio photons in Joules:
+\begin{align*}
+\SI{198}{\kilo\hertz} &= \SI{198E3}{\hertz} = \SI{198E3}{\per\second} \\
+E &= \SI{198E3}{\per\second} \times \SI{6.626E-34}{\joule\second} \\
+E &= \SI{1.312E-28}{\joule}
+\end{align*}
+Similarly, if I have an infrared laser emitting light at \SI{6000}{\per\centi\metre}, then I can multiply this number by $c$ to get the frequency in Hertz, and then multiply this by $h$ to get the energy in Joules:
+\begin{align*}
+\SI{6000}{\per\centi\metre} &= \SI{6000E2}{\per\metre} \\
+\nu &= \SI{6000E2}{\per\metre} \times \SI{2.997E8}{\metre\per\second} \\
+\nu &= \SI{1.798E14}{\per\second} \\
+E &= \SI{1.798E14}{\per\second} \times \SI{6.626E-34}{\joule\second} \\
+E &= \SI{1.191E-19}{\joule}
+\end{align*}
+Finally, I might have an X-ray source emitting X-rays with an energy of \SI{1400}{\electronvolt}. Here I can easily convert to Joules using the definition of the electronvolt:
+\begin{align*}
+E &= \SI{1400}{\electronvolt} \times \SI{1.602E-19}{\joule\per\electronvolt} \\
+E &= \SI{2.243E-16}{\joule}
+\end{align*}
+Note that the infrared photon is about 9 orders of magnitude (i.e. 1 billion times) more energetic  than the radio photon, and the X-ray is a thousand times more energetic than that. This is the huge range of energies we deal with in spectroscopy, and why we use different units for things! Doing this process of looking at units will help you work out how to do energy conversions, without having to learn tedious formulae\footnote{The units help you see where the formulae \textit{come from}, much more valuable knowledge to have.}. However, seeing these summarised as formulae can also be helpful, so:
+\begin{align*}
+E &= \frac{hc}{\lambda} = h\nu = 100\times hc\bar{\nu} 
+\end{align*}
+Another useful method might be to know some standard conversions like:
+\begin{itemize}
+\item $\SI{1}{\electronvolt} = \SI{8065.54}{\per\centi\metre}$
+\item $\SI{1}{\per\centi\metre} = \SI{1E7}{\nano\metre}$
+\item $\SI{1}{\tera\hertz} = \SI{33.36}{\per\centi\metre}$
+\end{itemize}
+Of course, there are lots of online calculators for these things, such as \url{https://halas.rice.edu/unit-conversions}. However, these don't help you a) in the exam, or b) when you are trying to have a conversation with someone about spectroscopy, so it's good to know how to do the conversions in your head (at least roughly).
+
+\begin{exercise}{Unit Conversions Practice}
+\begin{enumerate}
+\item Convert \SI{266}{\nano\metre} to \si{\electronvolt}.
+\item Convert \SI{8}{\per\centi\metre} to \si{\giga\hertz}.
+\item Convert \SI{100}{\kilo\joule\per\mole} to \si{\per\centi\metre}.
+\end{enumerate}
+\end{exercise}
+
+\subsection{Energy Gaps - Lines and Levels}
+We will come back to this again and again, but point (2) in our list earlier is critical. In spectroscopy, we are always measuring the \textbf{difference in energy} between two energy states or energy levels. We call the thing we measure a \textbf{line}, because historically spectra looked like a series of lines that would be imaged on paper (see \autoref{fig:lines}). We are not going to go deeply into the underlying quantum mechanics in this course\footnote{In fact, if you can draw two horizontal lines on some paper, that's about as much quantum mechanics as you need to understand 90\% of the spectroscopy you'll encounter.}, but it's useful to have an idea of what we mean by a \textbf{state}, which is really a shorthand for \textbf{quantum state}. 
+
+Spectroscopy is all about making atoms and molecules do stuff in response to being hit by light, and that `stuff' involves electrons and/or nuclei moving around. However, we know from CH1200 that all motion at a molecular level is \textbf{quantised} -- think about electrons in atoms, and how they occupy specific orbitals with well-defined energies. Each of these orbitals is a \textit{state} that the electron exists in, and each state has a well-defined energy. There are quantised energy states that relate to every kind of molecular motion: vibrational states, rotational states, and electronic states, for example. Think of a state as a kind of condition that the molecule or atom can be in, which has a well-defined energy\footnote{Formally, the state refers to the wavefunction that describes the atom or molecule with a given energy. You can find them out by solving the \schro equation, which is a story for another time.}. We normally represent states pictorially by drawing horizontal lines on paper, and jumping between these states is what we do in spectroscopy.
+
+Later on, we will see that quantum mechanics allows us to relate the energies of specific \textbf{states} to molecular properties, which is where the power of spectroscopy comes from. Just remember that what you measure in a spectrum is always the \textit{difference} between two energy levels or energy states (we'll get to the difference between levels and states shortly).
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{./lecture1/figures/H_spectrum}
+\caption{The visible-region spectrum of a hydrogen atom, with lines showing where the hydrogen atom emits light. Early spectroscopy mostly focussed on emission spectra from atoms.}\label{fig:lines}
+\end{figure}
+
+\begin{exercise}{Lines and Levels Practice}
+A molecule absorbs UV light with a wavelength of \SI{353}{\nano\metre} and jumps from the ground to excited state. The energy of the ground state is \SI{1.3}{\electronvolt}, what is the energy of the excited state?
+\end{exercise}
+
+\subsection{Populations and Degeneracy}
+Finally, point (3) in our earlier list talks about the population of a given state. If a state is \textbf{populated} it means that there are some molecules in that state. You can find out the population in a given state relative to another at a given temperature using the \textbf{Boltzmann Distribution}, as we've seen last year. 
+\begin{equation*}
+\frac{n_i}{n_j} = \frac{g_i}{g_j}\exp\left(-\frac{\Delta E}{k_BT}\right) ~\mathsf{where}~ \Delta E = E_i - E_j
+\end{equation*}
+Where $n_i$ is the number of molecules with energy $E_i$, and $g_i$ is the \textbf{degeneracy} of the level with energy $E_i$. You've probably heard the word \textbf{degenerate} in a chemistry context before, and may know that:
+\begin{quote}
+\textit{Two or more states with the same energy are known as degenerate states.}
+\end{quote}
+For example, you've probably heard that the three p-orbitals in an atom are all degenerate. We can make this definition a little more robust now, and say that:
+
+\begin{key}{Degeneracy}
+An \textbf{energy level} that is \textbf{n-fold degenerate} consists of \textbf{n states} which all have the same energy.
+\end{key}
+
+For example, in an atom, we might have the energy level corresponding to $n=2$ and $l=1$ (2p level). This level is \textbf{3-fold degenerate}, as we have 3 states, corresponding to our three p-orbitals ($\ml = -1, 0, 1$). In fact, an atomic energy level with angular momentum quantum number $l$ is $2l+1$-fold degenerate. Can you explain why there are 5 d-orbitals, and 7 f-orbitals?
+
+We've stumbled across the difference between a \textbf{level} and a \textbf{state} now too. A \textbf{level} refers to a state or set of states that have the same energy, whereas a \textbf{state} refers to a specific quantum mechanical energy state (i.e. a single solution to the \schro equation). You can't break a state down into anything more granular, and a good way to think of them is as \textbf{the smallest place where you can put population}. To give some examples:
+\begin{itemize}
+\item The $n=3$, $l=2$ level in an atom consists of 5 degenerate states (5 d-orbitals)\footnote{Astute readers may note that each orbital holds two electrons, and so must be two-fold degenerate, making the overall level 10-fold degenerate. This is true, if we account for \textit{spin degeneracy}, but in chemistry we often implicitly ignore this as we are used to putting two electrons in each state.}.
+\item In a hydrogenic atom, the $n=2$ level consists of 4 degenerate states (1 s-orbital and 3 p-orbitals).
+\end{itemize}
+
+Anyway, the bottom line is that now when we use the Boltzmann distribution, we account for degeneracy using this factor $g$. If the level with energy $E_i$ is two-fold degenerate, then $g_i =  2$, if it is three-fold degenerate, then $g_i = 3$ (illustrated in~\autoref{fig:degeneracy}) and so on. We will see later on how to know the degeneracies of different kinds of quantum states. 
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth]{./lecture1/figures/degeneracy}
+\caption{Degeneracy. An energy level that is 3-fold degenerate consists of 3 states with equal energy.}\label{fig:degeneracy}
+\end{figure}
+
+\begin{exercise}{Boltzmann Distribution}
+A given molecule can exist in two states, and the lower state has a degeneracy of 1, and the upper has a degeneracy of 3.
+\begin{enumerate}
+\item A sample of the molecules is held at \SI{200}{\kelvin}. If the energy gap between the states is \SI{300}{\per\centi\meter}, what is the population ratio?
+\item If the measured population ratio is 1.48, what is the temperature of the sample of molecules?
+\end{enumerate}
+\end{exercise}
+
+\subsection{Absorption and Emission}
+Finally, recall than when light hits matter, there are essentially three things that can happen:
+\begin{itemize}
+\item \textbf{Absorption} -- the light is absorbed and the molecule jumps to a higher energy state.
+\item \textbf{Spontaneous Emission} -- the molecule randomly falls to a lower energy state and emits a photon.
+\item \textbf{Stimulated Emission} -- a photon hits a molecule and causes it to fall to a lower energy state, so it emits another photon of the same energy.
+\end{itemize}
+Energy conservation is the basis for all of these processes. Whenever light hits a molecule all of these processes happen and the relative rates of them determine the finer points of the behaviour. The mathematics behind this is described by the \textbf{Einstein coefficients}, which is beyond the scope of what we'll do in this course (but worth looking at if you find this interesting\footnote{For example, either in the first couple of chapters of Hollas, or \url{https://en.wikipedia.org/wiki/Einstein_coefficients} is actually OK.}).
+
+\subsection{Wave-Particle Duality}
+Finally, let us remind ourselves that we have two pictures for how we think about `light'. One way think of it is as a \textbf{photon}, which is a discrete little package of energy. Another way is to think of the light as a \textbf{wave}, and specifically you can think about the wave as an \textbf{oscillating electric field}.
+
+Recall in CH1200 we learnt that neither of these two pictures provided us a complete description of how light behaves, and this is also true in spectroscopy. There are two pictures of how light interacts with matter: the `photon' picture and the `wave picture'. Or, as I have christened them, the \textbf{jumping molecule} picture and the \textbf{jiggling molecule} picture. We'll start thinking about jiggling molecules more thoroughly next time.
+
+\begin{conclusion}{Take Home Messages}
+\begin{itemize}
+\item Spectroscopy is all around you -- and is fundamental to all of science. 
+\item Spectroscopy is about measuring energy gaps between quantised energy states, which leads to information about molecular structure and properties.
+\item Revise energy unit conversion and the Boltzmann distribution from last year if you are rusty!
+\end{itemize}
+\end{conclusion}
+
+
+

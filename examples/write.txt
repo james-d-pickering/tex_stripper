@@ -1,0 +1,22 @@
+\begin{document}
+ 
+\frame{\titlepage}
+\n\\begin{frame}
+\begin{figure}
+this is a figure
+\end{figure}
+\\end{frame}
+\n\\begin{frame}
+	\begin{exercise}
+		\begin{equation}
+			equation in an exercise
+		\end{equation}
+however, this is!
+	\end{exercise}
+\\end{frame}
+\n\\begin{frame}
+	\begin{enumerate}
+		please ignore me
+	\end{enumerate}
+\\end{frame}
+\\end{document}
