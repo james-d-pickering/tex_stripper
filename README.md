@@ -5,7 +5,7 @@
 
 The initial intended use case was to strip all figure, table, and block environments from a set of text-heavy lecture notes and automatically insert them into a beamer presentation. The resulting beamer presentation can then be used when delivering the lectures as a set of slides, requiring minimal extra effort once the notes are written. However, it is flexible enough to be usable for many other applications. Existing resources doing similar things tend to be more limited in their use cases.
 
-`tex_stripper` is written in Rust by a Rust noob, and compiled binaries are provided.
+`tex_stripper` is written in Rust by a Rust noob, and compiled binaries are provided. In retrospect, I wouldn't have written this in rust, but I wanted an excuse to learn a bit of it. 
 
 ## Usage 
 `tex_stripper` can either be run using the pre-compiled binaries or by compiling and running from the Rust itself.
@@ -32,6 +32,7 @@ tex_stripper -i document.tex -o presentation.tex -f strip_input.tex --boxes-igno
 ### Advanced 
 
 The underlying rust code is reasonably thoroughly commented and is provided for further use under The GNU Public Licence V3. Compiling and running yourself via `cargo` is fairly straightforward. 
+
 ## Notes
 
 - Currently `tex_stripper` can only strip environments that start and end with a `\begin{}` and `\end{}` statement. 
@@ -39,11 +40,7 @@ The underlying rust code is reasonably thoroughly commented and is provided for 
 
 ## Bugs
 
-Please report bugs on GITHUB LINK.
-
-## Contact
-
-Contact me at EMAIL
+Please report bugs on via github.
 
 ## Licence
 Copyright 2023 J D Pickering
