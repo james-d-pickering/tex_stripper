@@ -39,11 +39,7 @@ The underlying rust code is reasonably thoroughly commented and is provided for 
 
 ## Bugs
 
-Please report bugs on GITHUB LINK.
-
-## Contact
-
-Contact me at EMAIL
+Please report bugs on the issues tab.
 
 ## Licence
 Copyright 2023 J D Pickering
