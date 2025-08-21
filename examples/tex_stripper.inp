@@ -1,10 +1,10 @@
-% content to use before stripped environment
+%# content to use before stripped environment
 \begin{frame}
-% content to use after stripped environment
+%# content to use after stripped environment
 \end{frame}
-% content to use at the end of the document
+%# content to use at the end of the document
 \end{document}
-% content to use at the start of the document
+%# content to use at the start of the document
 \begin{document}
  
 \frame{\titlepage}
