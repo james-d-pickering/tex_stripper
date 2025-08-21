@@ -21,7 +21,7 @@ Of the command line arguments, the only required arguments are:
 - `-o OUTPUT_FILE` - where `tex_stripper` should write the output (created if not present).
 
 Optional arguments are:
-- `-f FILE` - this allows you to specify a file containing lines of TeX that will be placed before and after each stripped environment in the final document, and at the start and end of the document. This file must conform to the example given (four blocks of TeX separated by comments). 
+- `-f FILE` - this allows you to specify a file containing lines of TeX that will be placed before and after each stripped environment in the final document, and at the start and end of the document. This file must conform to the example given (four blocks of TeX separated by comments starting with '%#' (hash to allow the TeX blocks to contain comments)). 
 - `--boxes-ignore ENVIRONMENTS` - this allows you specify a list of environments to **not** strip from your input .text file. 
 
 For example, you might want to create a beamer presentation `presentation.tex` containing environments from a large document `document.tex`, but excluding equations, itemizes, and enumerates. You can place the boilerplate TeX that comes at the start and end of your presentation file in an input file `strip_input.txt` and pass it using the -f flag. Similarly, you can add boilerplate TeX that surrounds each extracted figure environment with a beamer frame environment to the same file so that running `tex_stripper` produces a production-ready beamer presentation in one hit. You would then run:

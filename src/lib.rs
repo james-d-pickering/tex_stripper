@@ -55,7 +55,7 @@ pub fn run(args: Cli) -> Result<(), Box<dyn Error>> {
     if let Ok(content) = read_lines(&args.inputfile) {
         'inputloop: for line in content {
             if let Ok(text) = line { 
-                if text.trim().starts_with("%") { 
+                if text.trim().starts_with("%#") { 
                     input_counter = input_counter + 1;
                     continue 'inputloop }
                 if input_counter == 1 { 
